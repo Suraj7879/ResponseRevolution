@@ -1,2 +1,22 @@
 /api_key.txt
 vendor/
+/custom_search_key.txt
+
+
+<script async src="https://cse.google.com/cse.js?cx=05a359d5377274ec4">
+</script>
+<div class="gcse-search"></div>
+
+
+https://www.googleapis.com/customsearch/v1?key=AIzaSyA1K9l6tk_jEkbWGlZge60Kcn65T1LnZuE&cx=05a359d5377274ec4&q=lectures
+
+
+
+"items": [
+    {
+        "link",
+        "title",
+        
+    }
+]
+
