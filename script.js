@@ -15,7 +15,7 @@ function send_message() {
     let message = add_message("incoming", '<div id="cursor"></div>');
     message_input.value = "";
 
-    fetch("message.php", {
+    fetch("http://localhost:5361/message.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",

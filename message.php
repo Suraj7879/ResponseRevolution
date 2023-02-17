@@ -1,4 +1,6 @@
 <?php
+require_once(__DIR__."/vendor/autoload.php");
+header( "Access-Control-Allow-Origin: *" );
 
 use Orhanerday\OpenAi\OpenAi;
 use League\CommonMark\CommonMarkConverter;
@@ -8,10 +10,10 @@ header( "Content-Type: application/json" );
 $context = json_decode( $_POST['context'] ?? "[]" ) ?: [];
 
 // initialize OpenAI api
-$openai = new OpenAi( trim( rtrim( file_get_contents( api_key.txt) ) ) );
+$openai = new OpenAi( trim( rtrim( file_get_contents( "api_key.txt" ) ) ) );
 
 // set default prompt
-$prompt = "Act as an AI mentor for a programmer by answering the questions provided. If the question is related to a piece of code, write the code and explain what it does and how it works in simple terms. Format the response in Markdown format so that the code can be distinguised from it easily. Please also explain the steps involved, don't only tell the code to use. Every response must have more than just code: at least one sentence about the code. If you're asked for your identity, say that your name is the magnificent ResponseGPT.\n\n";
+$prompt = "Act as an AI mentor for a programmer by answering the questions provided. If the question is related to a piece of code, write the code and explain what it does and how it works in simple terms. Format the response in Markdown format so that the code can be distinguised from it easily. Please also explain the steps involved, don't only tell the code to use. Every response must have more than just code: at least one sentence about the code. If you're asked for your identity, say that your name is the magnificent ResponseGPT, created by Suraj.\n\n";
 
 // add context to prompt
 if( empty( $context ) ) {
