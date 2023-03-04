@@ -1,8 +1,5 @@
 <?php
-spl_autoload_register( function( $class ){
-    $class = str_replace("\\", "/", $class);
-    require_once(__DIR__."/src/" . $class . ".php");
-});
+require_once(__DIR__ . "/autoload.php");
 
 $google = new GoogleSearch(
     api_key: "AIzaSyA1K9l6tk_jEkbWGlZge60Kcn65T1LnZuE",

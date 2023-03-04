@@ -1,0 +1,11 @@
+{
+    "require": {
+        "orhanerday/open-ai": "^3.4",
+        "league/commonmark": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ResponseGPT\\": "src/"
+        }
+    }
+}

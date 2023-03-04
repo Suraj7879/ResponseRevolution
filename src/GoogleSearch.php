@@ -1,4 +1,6 @@
 <?php
+namespace ResponseGPT;
+require_once 'SearchResult.php';
 class GoogleSearch
 {
     const URL = "https://www.googleapis.com/customsearch/v1?key=API_KEY&cx=ENGINE_ID";
@@ -11,12 +13,12 @@ class GoogleSearch
     /**
      *  @return SearchResult[]
      */
-    public function search(string $search_query): SearchResult{
+    public function search(string $search_query){
         $results = file_get_contents( $this->get_url() . "&q=" . urlencode( $search_query ) );
 
-        return this->parse_results( $results );
+        return $this->parse_results( $results );
     }
-
+    
     /**
      *  @return SearchResult[]
      */
@@ -41,7 +43,7 @@ class GoogleSearch
         return $results;
     }
 
-    private function get_url(string $query): string
+    private function get_url()
     {
         return str_replace(
             ["API_KEY", "ENGINE_ID"],
@@ -50,3 +52,4 @@ class GoogleSearch
         );
     }
 }
+

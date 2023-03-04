@@ -1,12 +1,12 @@
 <?php
-spl_autoload_register( function( $class ){
-    $class = str_replace("\\", "/", $class);
-    require_once(__DIR__."/src/" . $class);
-});
-
-$google = new GoogleSearch();
-$search = $google->search( "puppies" );
-
-print_r( $search );
+namespace ResponseGPT;
+class SearchResult
+{
+    public function __construct(
+        public string $url,
+        public string $title,
+        public string $description
+    ){}
+}
 
 

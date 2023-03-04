@@ -7,7 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
-    'Suraj\\ResponseRevolution\\' => array($baseDir . '/src'),
+    'ResponseGPT\\' => array($baseDir . '/src'),
     'Psr\\EventDispatcher\\' => array($vendorDir . '/psr/event-dispatcher/src'),
     'Orhanerday\\OpenAi\\' => array($vendorDir . '/orhanerday/open-ai/src'),
     'League\\Config\\' => array($vendorDir . '/league/config/src'),

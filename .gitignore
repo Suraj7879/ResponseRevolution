@@ -16,7 +16,7 @@ https://www.googleapis.com/customsearch/v1?key=AIzaSyA1K9l6tk_jEkbWGlZge60Kcn65T
     {
         "link",
         "title",
-        
+        "snippet"
     }
 ]
 

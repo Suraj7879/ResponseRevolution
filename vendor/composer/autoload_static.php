@@ -15,7 +15,10 @@ class ComposerStaticInitcb3a699a8da94685fe77b5c0e9183b31
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
-            'Suraj\\ResponseRevolution\\' => 25,
+        ),
+        'R' => 
+        array (
+            'ResponseGPT\\' => 12,
         ),
         'P' => 
         array (
@@ -41,7 +44,7 @@ class ComposerStaticInitcb3a699a8da94685fe77b5c0e9183b31
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
         ),
-        'Suraj\\ResponseRevolution\\' => 
+        'ResponseGPT\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
