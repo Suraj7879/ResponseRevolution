@@ -11,7 +11,7 @@ class ResponseGPT
     private array $context;
 
     public function __construct(
-        private OpenAi $open_ai_api,
+        protected OpenAi $open_ai_api,
     ) {}
 
     public function set_default_prompt( string $prompt ) {
